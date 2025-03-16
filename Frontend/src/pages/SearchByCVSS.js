@@ -24,7 +24,7 @@ const SearchByCVSS = () => {
 
     try { // https://www.w3schools.com/js/js_errors.asp
       const response = await axios.get( // https://circleci.com/blog/making-http-requests-with-axios/
-        `http://localhost:5000/search-by-cvss/?severity=${selectedSeverity}&startIndex=${startIndex}&resultsPerPage=${itemsPerPage}`
+        `https://securesentinels2025.pythonanywhere.com/search-by-cvss/?severity=${selectedSeverity}&startIndex=${startIndex}&resultsPerPage=${itemsPerPage}`
       ); // Make a GET request to the backend API
       setVulnerabilities(response.data.vulnerabilities); // Set the vulnerabilities state with the response data
       setTotalResults(response.data.totalResults); // Set the total number of results
