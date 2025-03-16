@@ -13,7 +13,7 @@ function VendorSearch() {
   const [error, setError] = useState("");//This stores any errors that happen
 
   useEffect(() => {//this outlines the effect for tje vendors and specifies that it will only run once
-    fetch("http://localhost:5000/search-by-vendor/vendors")
+    fetch("https://securesentinels2025.pythonanywhere.com/search-by-vendor/vendors")
       .then((res) => res.json())//this is used to parse the JSON response
       .then((data) => setVendors(data))//this will update the setVendors component defined above
       .catch(() => setError("Failed to load vendors."));
@@ -21,7 +21,7 @@ function VendorSearch() {
 
   useEffect(() => {//this does the same but for products
     if (vendor) {//the product will only become avaiable to select from if a vendor has been selected, since each vendor has their set of products, and not doing this would make the product selection a nightmare
-      fetch(`http://localhost:5000/search-by-vendor/products?vendor=${vendor}`)
+      fetch(`https://securesentinels2025.pythonanywhere.com/search-by-vendor/products?vendor=${vendor}`)
         .then((res) => res.json())//parses the JSON response
         .then((data) => setProducts(data))//updates the setProducts component above
         .catch(() => setError("Failed to load products."));
@@ -30,7 +30,7 @@ function VendorSearch() {
 
   useEffect(() => {
     if (product&&vendor) {//this defines that both product and vendor have to selected
-      fetch(`http://localhost:5000/search-by-vendor/versions?vendor=${vendor}&product=${product}`)
+      fetch(`https://securesentinels2025.pythonanywhere.com/search-by-vendor/versions?vendor=${vendor}&product=${product}`)
         .then((res) => res.json())//parses the JSON response
         .then((data) => setVersions(data))//This does the same as the rest, it updates the setverions component 
         .catch(() => setError("Failed to load versions."));
@@ -41,7 +41,7 @@ function VendorSearch() {
     setError(""); 
     try {
         const response = await fetch(
-            `http://localhost:5000/search-by-vendor/search?vendor=${vendor}&product=${product}&version=${version}`
+            `https://securesentinels2025.pythonanywhere.com/search-by-vendor/search?vendor=${vendor}&product=${product}&version=${version}`
         );
         const data = await response.json();
 
