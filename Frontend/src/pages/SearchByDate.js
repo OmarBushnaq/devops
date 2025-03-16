@@ -23,7 +23,7 @@ const SearchByDate = () => {
     setError(""); // Clear previous errors
 
     try { // Send a GET request to the backend with the selected date Reference: JavaScript Fetch API - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-      const response = await fetch(`http://localhost:5000/search-by-date/?date=${date}`);
+      const response = await fetch(`https://securesentinels2025.pythonanywhere.com/search-by-date/?date=${date}`);
       const data = await response.json(); // Parse response as JSON
 
       if (response.ok) { // Check if request was successful
