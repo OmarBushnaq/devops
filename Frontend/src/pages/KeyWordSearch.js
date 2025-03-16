@@ -16,7 +16,7 @@ function KeyWordSearch()
   {
     try 
     {
-      const response = await axios.get(`http://localhost:5000/search-by-keyword`,{ params: { keyword },});
+      const response = await axios.get(`https://securesentinels2025.pythonanywhere.com/search-by-keyword`,{ params: { keyword },});
       setResults(response.data); // Set the search results in state
     } 
     catch (error) 
