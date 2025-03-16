@@ -45,7 +45,7 @@ function SearchByCategory() {
     try {
       // Make an API request to fetch vulnerabilities for the selected category
       const response = await fetch(
-        `http://localhost:5000/search-by-category?category=${encodeURIComponent(category)}`
+        `https://securesentinels2025.pythonanywhere.com/search-by-category?category=${encodeURIComponent(category)}`
       );
       const data = await response.json(); // Convert response to JSON
 
