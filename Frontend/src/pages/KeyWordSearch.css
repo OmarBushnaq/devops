@@ -1,0 +1,36 @@
+/* styles.css */
+.dictionary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: auto;
+  margin-bottom: 50px; /* Adjust the value for desired spacing */
+}
+
+.dictionary-table th, .dictionary-table td {
+  border: 3px solid #343333;
+  padding: 8px;
+  text-align: center;
+}
+
+.dictionary-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.dictionary-table th.thead {
+  background-color: #f2f2f2;
+  text-align: center; /* Center align the text in the header */
+}
+
+
+.dictionary-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#note{
+
+  font-size: smaller;
+  font-style: italic;
+  color: rgb(255, 115, 34);
+}

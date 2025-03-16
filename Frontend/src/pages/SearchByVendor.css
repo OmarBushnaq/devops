@@ -1,0 +1,13 @@
+/*this is used for CSS Styling*/
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .input-field {
+    flex: 1;
+  }
+  .input-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }

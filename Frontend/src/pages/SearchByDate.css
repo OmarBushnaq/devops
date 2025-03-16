@@ -1,0 +1,83 @@
+/* Apply styles only inside the SearchByDate component */
+.search-by-date-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.search-by-date-heading {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-by-date-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-by-date-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search-by-date-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-by-date-button:hover {
+  background-color: #0056b3;
+}
+
+.search-by-date-loading {
+  color: #007bff;
+  font-size: 16px;
+}
+
+.search-by-date-error {
+  color: red;
+  font-size: 14px;
+}
+
+.search-by-date-result-container {
+  text-align: left;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-by-date-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-by-date-list-item {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-by-date-no-results {
+  color: #666;
+  font-size: 16px;
+}
