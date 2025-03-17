@@ -24,7 +24,7 @@ function SearchByCategory() {
     "Improper Input Validation",
     "Path Traversal",
     "Use of Hard-coded Credentials",
-    "Code Injection",
+    "Deserialization of Untrusted Data",
   ];
 
   /**
@@ -72,18 +72,10 @@ function SearchByCategory() {
         {cweCategories.map((cwe, index) => (
           <option key={index} value={cwe}>{cwe}</option>
         ))}
-        <option value="Other">Other (Enter Manually)</option>
+        
       </select>
 
-      {/* Input field appears only if "Other" is selected for manual category entry */}
-      {category === "Other" && (
-        <input
-          type="text"
-          placeholder="Enter custom category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        />
-      )}
+      
 
       {/* Search button triggers handleSearch() */}
       <button onClick={handleSearch}>Search</button>
